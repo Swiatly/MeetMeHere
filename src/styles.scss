@@ -1,0 +1,18 @@
+@import '/src/styles/reset.scss';
+
+@font-face {
+    font-family: Nunito;
+    src: url(./assets/fonts/Nunito-Regular.ttf);
+}
+
+html, body {
+    font-family: Nunito, sans-serif;
+}
+
+.white {
+    color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+<div class="background">
+    <div class="container">
+        <img class="white-text-logo" src="../../assets/logo-text-white.png" alt="">
+        <!-- Panel logowania -->
+        <ng-container *ngIf="panelType === 'login'">
+            <form autocomplete="off">
+                <div class="container__input">
+                    <input class="form-element white" id="login-email" type="email" placeholder=" ">
+                    <label class="white" for="login-email">Adres e-mail</label>
+                </div>
+                <div class="container__input">
+                    <input class="form-element white" id="login-password" type="password" placeholder=" ">
+                    <label class="white" for="login-password">Hasło</label>
+                </div>
+                <button class="container__login-button form-element white pointer">Zaloguj</button>
+            </form> 
+            <button (click)="panelType = 'password-reset'" class="container__reset-button white pointer">Nie pamiętasz hasła?</button>
+            <div class="white-line"></div>
+            <button (click)="panelType = 'register'" class="container__register-button form-element white pointer">Zarejestruj się</button>
+        </ng-container>
+        <!-- Panel rejestracji -->
+        <ng-container *ngIf="panelType === 'register'">
+            <form autocomplete="off">
+                <div class="container__input">
+                    <input class="form-element white" id="register-email" type="email" placeholder=" ">
+                    <label class="white" for="register-email">Adres e-mail</label>
+                </div>
+                <div class="container__input">
+                    <input class="form-element white" id="register-password" type="password" placeholder=" ">
+                    <label class="white" for="register-password">Hasło</label>
+                </div>
+                <div class="container__input">
+                    <input class="form-element white" id="register-repeat-password" type="password" placeholder=" ">
+                    <label class="white" for="register-repeat-password">Powtórz hasło</label>
+                </div>
+                <button class="container__register-button form-element white pointer">Zarejestruj się</button>
+            </form> 
+            <div class="white-line"></div>
+            <button (click)="panelType = 'login'" class="container__login-button form-element white pointer">Logowanie</button>
+        </ng-container>
+        <!-- Panel przypomnienia hasła -->
+        <ng-container *ngIf="panelType === 'password-reset'">
+            <div class="container__password-reset-text white">Podaj adres e-mail, a my wyślemy ci link do zmiany hasła.</div>
+            <form autocomplete="off">
+                <div class="container__input">
+                    <input class="form-element white" id="reset-email" type="email" placeholder=" ">
+                    <label class="white" for="reset-email">Adres e-mail</label>
+                </div>
+                <button (click)="panelType = 'login'" class="container__send-reset-button form-element white pointer">Wyślij</button>
+            </form>
+            <div class="white-line"></div>
+            <button (click)="panelType = 'login'" class="container__login-button form-element white pointer">Logowanie</button>
+        </ng-container>
+    </div>
+</div>
