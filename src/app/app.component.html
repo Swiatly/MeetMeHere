@@ -1,6 +1,8 @@
-<ng-container *ngIf="!isLoggedIn">
-  <app-welcome-page-logged-out></app-welcome-page-logged-out>
-</ng-container>
-<ng-container *ngIf="isLoggedIn">
-  
-</ng-container>
+<div class="background">
+  <ng-container *ngIf="isLoggedIn">
+    <app-welcome-page-logged-out></app-welcome-page-logged-out>
+  </ng-container>
+  <ng-container *ngIf="!isLoggedIn">
+    <app-welcome-page-logged-in></app-welcome-page-logged-in>
+  </ng-container>  
+</div>

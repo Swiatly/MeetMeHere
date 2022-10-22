@@ -1,136 +1,124 @@
-
-.background {
-    position: relative;
+.layout {
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom right, #5353b6, #348ac7);
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 16px;
 
     .white-text-logo {
         width: 150px;
         animation: rotate 10s ease-in-out infinite;
         margin: 20px 0;
     }
+    
+    form {
+        text-align: center;
+    }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px;
-        background: linear-gradient(
-            to left, 
-            rgba(255, 255, 255, 0.35),
-            rgba(255, 255, 255, 0.25)
-        );
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        
-        form {
-            text-align: center;
+    &__reset-button {
+        border: none;
+        background-color: transparent;
+        font-size: 18px;
+        margin-top: 20px;
+
+        &:focus {
+            outline: none;
+            text-decoration: underline;
+        }
+    }
+
+    &__reset-text {
+        font-size: 18px;
+    }
+
+    &__send-reset-button {
+        margin-top: 20px;
+        background-color: #348ac7;
+    }
+
+    &__login-button {
+        margin-top: 20px;
+        background-color: #5353b6;
+
+        &:hover {
+            background-color: #4949a0
+        }
+    }
+
+    &__register-button {
+        margin-top: 20px;
+        background-color: #348ac7;
+
+        &:hover {
+            background-color: #2f7eb6;
+        }
+    }
+
+    &__input {
+        position: relative;
+        margin-top: 20px;
+
+        input {
+            background: linear-gradient(
+                to left, 
+                rgba(255, 255, 255, 0.25),
+                rgba(255, 255, 255, 0.15)
+            );
         }
 
-        &__reset-button {
-            border: none;
-            background-color: transparent;
-            font-size: 18px;
-            margin-top: 20px;
-
-            &:focus {
-                outline: none;
-                text-decoration: underline;
-            }
-        }
-
-        &__reset-text {
-            font-size: 18px;
-        }
-
-        &__send-reset-button {
-            margin-top: 20px;
-            background-color: #348ac7;
-        }
-
-        &__login-button {
-            margin-top: 20px;
-            background-color: #5353b6;
-
-            &:hover {
-                background-color: #4949a0
-            }
-        }
-
-        &__register-button {
-            margin-top: 20px;
-            background-color: #348ac7;
-
-            &:hover {
-                background-color: #2f7eb6;
-            }
-        }
-
-        &__input {
-            position: relative;
-            margin-top: 20px;
-
-            input {
-                background: linear-gradient(
-                    to left, 
-                    rgba(255, 255, 255, 0.25),
-                    rgba(255, 255, 255, 0.15)
-                );
-            }
-
-            label {
-                font-size: 24px;
-                position: absolute;
-                left: 20px;
-                top: 50%;
-                opacity: 1;
-                transform: translateY(-50%);
-                transition: 0.3s left, 0.3s opacity;
-            }
-
-            input:focus + label,
-            input:not(:placeholder-shown) + label {
-                opacity: 0;
-                left: 200px;
-            }
-        }
-
-        .form-element {
-            border: none;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-            border-radius: 16px;
+        label {
             font-size: 24px;
-            padding: 12px 20px;
-            transition: box-shadow 0.3s, background-color 0.3s;
-        
-            &:hover {
-                box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25)
-            }
-        
-            &:focus {
-                outline: solid 2px rgba($color: white, $alpha: 0.75);
-            }
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            opacity: 1;
+            transform: translateY(-50%);
+            transition: 0.3s left, 0.3s opacity;
         }
 
-        .white-line {
-            width: 100%;
-            height: 2px;
-            margin-top: 20px;
-            border-radius: 2px;
-            background-color: rgba($color: white, $alpha: 0.3);
+        input:focus + label,
+        input:not(:placeholder-shown) + label {
+            opacity: 0;
+            left: 200px;
         }
+    }
+
+    .form-element {
+        border: none;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+        font-size: 24px;
+        padding: 12px 20px;
+        transition: box-shadow 0.3s, background-color 0.3s;
+    
+        &:hover {
+            box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25)
+        }
+    
+        &:focus {
+            outline: solid 2px rgba($color: white, $alpha: 0.75);
+        }
+    }
+
+    .white-line {
+        width: 100%;
+        height: 2px;
+        margin-top: 20px;
+        border-radius: 2px;
+        background-color: rgba($color: white, $alpha: 0.3);
     }
 }
 
-@keyframes rotate {
-    from {transform: rotate(0deg)}
-    to {transform: rotate(360deg)}
-}
 
+@keyframes rotate {
+from {transform: rotate(0deg)}
+to {transform: rotate(360deg)}
+}
