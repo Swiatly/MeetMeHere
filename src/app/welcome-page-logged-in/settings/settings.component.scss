@@ -1,0 +1,35 @@
+.settings-container {
+    padding: 15px 25px;
+
+    &__header {
+        text-align: center;
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+
+    &__inputBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        
+        label {
+            margin-bottom: 3px;
+            font-size: 18px;
+        }
+
+        input:focus {
+            outline: solid 2px rgba($color: #5353b6, $alpha: 0.75);
+        }
+
+        input[type=text], #date-of-birth {
+            border: none;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 16px;
+            font-size: 18px;
+            padding: 6px 12px;
+        }
+    }
+}
+
+

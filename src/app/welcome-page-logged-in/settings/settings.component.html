@@ -1,0 +1,21 @@
+<div class="settings-container glass-box">
+    <div class="settings-container__header white bold">Ustawienia konta</div>
+    <div class="settings-container__inputBox">
+        <label class="white bold" for="name">Imię:</label>
+        <input id="name" type="text">
+    </div>
+    <div class="settings-container__inputBox">
+        <label class="white bold" for="surname">Nazwisko:</label>
+        <input id="surname" type="text">
+    </div>
+    <div class="settings-container__inputBox">
+        <label class="white bold" for="date-of-birth">Data urodzenia:</label>
+        <input type="date" id="date-of-birth" value="2018-07-22"
+        min="1900-01-01" [max]="yesterday">
+    </div>
+    <div class="settings-container__inputBox">
+        <label class="white bold" for="avatar">Zdjęcie profilowe:</label>
+        <input type="file" id="avatar" 
+        accept="image/png, image/jpeg">
+    </div>
+</div>

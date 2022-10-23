@@ -72,3 +72,12 @@
         }
     }
 }
+
+.board-container {
+    display: flex;
+    justify-content: center;
+
+    &__settingsBox {
+        margin-top: 20px;
+    }
+}

@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class WelcomePageLoggedInComponent implements OnInit {
 
   public hasProfilePicture: boolean = false;
+  public boardType: string = 'main'
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public changeBoardView(viewType: string) {
+    this.boardType = viewType;
   }
 
 }

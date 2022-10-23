@@ -13,7 +13,10 @@
         <div [ngStyle]="{'margin-right': '10px'}" class="top-nav__iconBox">
             <img class="top-nav__iconBox--friends nav-icon" src="../../assets/users.svg" alt="friends icon">
         </div>
-        <div [ngStyle]="{'margin-right': '10px'}" class="top-nav__iconBox">
+        <div 
+            [ngStyle]="{'margin-right': '10px'}" 
+            class="top-nav__iconBox"
+            (click)="changeBoardView('settings')">
             <img class="top-nav__iconBox--settings nav-icon" src="../../assets/settings.svg" alt="settings icon">
         </div>
         <div *ngIf="!hasProfilePicture" class="top-nav__iconBox">
@@ -25,4 +28,8 @@
     </nav>
 </header>
 
-    
+<div class="board-container">
+    <main-board *ngIf="boardType === 'main'"></main-board>
+    <settings *ngIf="boardType === 'settings'" class="board-container__settingsBox"></settings>
+    <!-- <friends-list></friends-list> -->
+</div>
